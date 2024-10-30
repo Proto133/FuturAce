@@ -67,7 +67,7 @@ function startGame() {
     <div class="cityscape-bg"></div>
     
     <div class="content">
-      <h1 class="game-title">RETRO RUNNER</h1>
+      <h1 class="game-title">FUTURACE</h1>
       
       <div class="menu-options">
         <button
