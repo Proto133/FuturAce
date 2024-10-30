@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import GameCanvas from './components/game/GameCanvas.vue';
-import { useGameStore } from './stores/game';
+import GameCanvas from "./components/game/GameCanvas.vue";
+import { useGameStore } from "./stores/game";
+import StartScreen from "./components/start/StartScreen.vue";
 
 const gameStore = useGameStore();
 </script>
 
 <template>
   <div class="game-container">
-    <GameCanvas />
-    <div v-if="!gameStore.isPlaying" class="game-overlay">
-      <h1>Retro Runner</h1>
-      <button @click="gameStore.startGame">Start Game</button>
-    </div>
+    <StartScreen v-if="!gameStore.isPlaying" />
+    <GameCanvas v-else />
   </div>
 </template>
 
